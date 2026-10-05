@@ -268,7 +268,7 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       role: 'Lead mobile engineer · contributor to web portal and services',
-      period: 'Oct 2022 – Present',
+      period: 'Oct 2022 – Present · my core project',
       overview:
         'CheckNShare lets companies run a shared fleet without keys or a front desk. Employees book a car (self-drive or with a driver), unlock it from their phone over Bluetooth, document its condition and hand it back. Fleet admins manage bookings, approvals, drivers, damages and spending from a web portal. It is white-label and multi-tenant, shipped under two client brands in five languages.',
       surfaces: [
@@ -312,6 +312,7 @@ export const projects: Project[] = [
       ],
       outcomes: [
         'Lead on the mobile app since 2022 — owning features, upgrades and releases from early versions to today’s React Native 0.84 build.',
+        'Live on the App Store and Google Play, with 1,000+ downloads on Google Play.',
         'One codebase shipped as two branded apps for different companies.',
         'Five languages including Arabic right-to-left, down to the camera overlays.',
         'Photos captured in the app feed straight into the Verifai AI inspection platform.',
