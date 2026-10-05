@@ -53,12 +53,14 @@ export default function Projects() {
                 <p>{a.text}</p>
                 <div className="tags">{a.stack.map((t) => <i key={t}>{t}</i>)}</div>
               </div>
-              <div className="also-rel">
-                <span className="mono">Related</span>
-                {a.related.map((r) => (
-                  <Link key={r.slug} to={`/projects/${r.slug}`}>{r.label} →</Link>
-                ))}
-              </div>
+              {a.related.length > 0 && (
+                <div className="also-rel">
+                  <span className="mono">Related</span>
+                  {a.related.map((r) => (
+                    <Link key={r.slug} to={`/projects/${r.slug}`}>{r.label} →</Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

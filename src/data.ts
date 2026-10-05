@@ -399,7 +399,7 @@ const allProjects: Project[] = [
           name: '6 · The same rules on the website',
           role: 'Booking website',
           points: [
-            'Extended the WordPress booking plugin (PHP) so web customers get the same journeys: pay dues, extend an agreement, book a subscription or CDW+, validate promos and verify by OTP — all through the ClickPay gateway.',
+            'Brought the same journeys to the booking website — pay dues, extend an agreement, book a subscription or CDW+. See the separate Alfaris Booking Website case study.',
           ],
         },
       ],
@@ -416,6 +416,69 @@ const allProjects: Project[] = [
         'Near-weekly releases to the stores and over the air throughout 2026.',
       ],
       stack: ['React Native 0.84', 'TypeScript', 'WordPress', 'PHP', 'ClickPay', 'Docker', 'CodePush'],
+    },
+  },
+  {
+    slug: 'car-rental-website',
+    title: 'Alfaris Booking Website',
+    tagline: 'The rental app’s journeys, brought to the web in WordPress',
+    kind: 'WEB · WORDPRESS / PHP · 2026 → NOW',
+    summary:
+      'Customers who book on the Alfaris website should get the same choices as in the mobile app. I extend the company’s WordPress booking plugin in PHP so that subscribing monthly, extending an agreement and paying dues work on the web the same way — in English and Arabic.',
+    highlights: [
+      'WordPress booking plugin (PHP)', 'Monthly subscription booking',
+      'Pay dues & extend agreements', 'CDW+ and promo codes',
+      'OTP verification', 'ClickPay payments',
+    ],
+    tags: ['WordPress', 'PHP', 'ClickPay'],
+    visual: 'rental',
+    accent: 'var(--c)',
+    image: '/projects/alfaris-web-card.jpg',
+    gallery: [
+      { src: '/projects/alfaris-web-home.jpg', caption: 'Booking search on the home page — pick-up and return branch, dates, and a second tab for monthly subscriptions' },
+      { src: '/projects/alfaris-web-subscription.jpg', caption: 'Monthly subscription — its own search and booking journey, alongside daily rental' },
+      { src: '/projects/alfaris-web-arabic.jpg', caption: 'The Arabic site — the same journeys mirrored right-to-left' },
+    ],
+    caseStudy: {
+      role: 'Web developer — booking plugin, subscriptions and payments',
+      period: '2026 – Present',
+      overview:
+        'The Alfaris website is where many customers start a rental. It runs on WordPress, with a booking plugin that talks to the same back office as the mobile app. As the app gained monthly subscriptions and self-service payments, the website fell behind: web customers still had to call or visit a branch for anything beyond a daily booking. My work is to bring those journeys to the web, using the same pricing rules and the same payment gateway, so a quote on the site matches the app and the counter.',
+      surfaces: [
+        {
+          name: '1 · Subscriptions on the web',
+          role: 'Booking plugin',
+          points: [
+            'Extended the WordPress booking plugin (PHP) so customers can book a monthly subscription from the website, next to the existing daily-rental search.',
+            'CDW+ insurance cover and promo codes are validated against the back office before the customer sees a total.',
+          ],
+        },
+        {
+          name: '2 · Paying and extending online',
+          role: 'Payments',
+          points: [
+            'Customers can pay outstanding dues and extend a rental agreement online, through the ClickPay gateway.',
+            'Sensitive steps are verified with a one-time password (OTP) sent to the customer’s phone.',
+          ],
+        },
+        {
+          name: '3 · Same rules as the app',
+          role: 'Consistency',
+          points: [
+            'The website calls the same back-office pricing as the mobile app, so the two never disagree on a price.',
+            'The new journeys work in both the English and the right-to-left Arabic site.',
+          ],
+        },
+      ],
+      challenges: [
+        { title: 'One set of rules, two front ends', text: 'The app is React Native and the site is WordPress, but both have to produce the same price and the same contract. I kept the pricing in the back office and made each front end show and submit exactly what it returns.' },
+        { title: 'Adding to a live plugin', text: 'The booking plugin already serves daily rentals to real customers. I added the subscription, extension and payment journeys in PHP without disturbing the booking flow people already use.' },
+      ],
+      outcomes: [
+        'Web customers can subscribe, extend and pay without visiting a branch — the same journeys as the mobile app.',
+        'The website and the app share pricing rules and the ClickPay payment gateway.',
+      ],
+      stack: ['WordPress', 'PHP', 'JavaScript', 'ClickPay'],
     },
   },
   {
@@ -508,7 +571,7 @@ const allProjects: Project[] = [
 ]
 
 /** Order the products appear in on the home page — core project first. */
-const order = ['corporate-car-sharing', 'yard-designer', 'ai-vehicle-inspection', 'car-rental', 'student-pass-system']
+const order = ['corporate-car-sharing', 'yard-designer', 'ai-vehicle-inspection', 'car-rental', 'car-rental-website', 'student-pass-system']
 export const projects: Project[] = order.map((slug) => allProjects.find((p) => p.slug === slug)!)
 
 // Real numbers from git history (see README). Shown in the hero.
@@ -561,7 +624,7 @@ export const alsoBuilt = [
     text: 'A separate mobile app for Alfaris fleet operators: track vehicles and record every vehicle going in and out, so the yard and the counter see the same fleet.',
     role: 'Built',
     stack: ['React Native', 'React'],
-    related: [{ label: 'Alfaris Rent-A-Car', slug: 'car-rental' }],
+    related: [] as { label: string; slug: string }[],
   },
   {
     name: 'Food-delivery fleet client — web & yard management',
