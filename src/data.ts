@@ -619,12 +619,16 @@ export const sites = [
 /** Smaller deliveries that don't need a full case study. */
 export const alsoBuilt = [
   {
-    name: 'Fleetable — fleet operator app',
-    client: 'Car rental · operations team',
-    text: 'A separate mobile app for Alfaris fleet operators: track vehicles and record every vehicle going in and out, so the yard and the counter see the same fleet.',
-    role: 'Built',
+    name: 'Fleetable Enterprise — fleet operator app',
+    client: 'Car rental · counter & operations staff',
+    text: 'The staff-side app for rental counters: vehicle check-in and check-out with photos, and fast bookings from a phone. I contribute features and fixes when the team needs them, and I manage its App Store and Google Play releases.',
+    role: 'Contributor · releases',
     stack: ['React Native', 'React'],
     related: [] as { label: string; slug: string }[],
+    links: [
+      { label: 'App Store', url: 'https://apps.apple.com/app/fleetable-enterprise/id1528931411' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.runcodesoft.fleetable' },
+    ],
   },
   {
     name: 'Food-delivery fleet client — web & yard management',
@@ -633,6 +637,7 @@ export const alsoBuilt = [
     role: 'Built & integrated',
     stack: ['React', 'Next.js'],
     related: [{ label: 'Yard Management', slug: 'yard-designer' }, { label: 'Verifai AI', slug: 'ai-vehicle-inspection' }],
+    links: [] as { label: string; url: string }[],
   },
 ]
 
@@ -667,7 +672,7 @@ export const journey = [
   { when: '2019 — 2020', title: 'Mobile Application Developer', at: 'RasiInfotech · Salem', text: 'Jewellery POS and billing app with Bluetooth printing and QR scanning, plus chit-fund and restaurant apps.', level: 'Hardware & business apps' },
   { when: '2020 — 2021', title: 'Team Lead — Mobile & Web', at: 'BrandIT Technologies · Visakhapatnam', text: 'Led and mentored five developers and built Tip My Ticket end to end — React Native app, web app and Django backend.', level: 'First team, first full product' },
   { when: '2021 — 2022', title: 'Software Developer', at: 'Digicorp Information Systems · Ahmedabad', text: 'React Native investment app (Sprint Money) with a payment gateway, REST APIs and push notifications.', level: 'Fintech-grade quality' },
-  { when: '2022 — Now', title: 'Senior Software Engineer', at: 'RunCode Software Solutions · Hyderabad', text: 'Mobility and fleet products for Middle East clients: lead mobile engineer on CheckNShare since 2022, the Verifai AI inspection web app, the Alfaris rental app and website, and — solo — the Yard Management 2D/3D platform, used in the Fleetable portal and a food-delivery client’s portal — plus a fleet-operator app for Alfaris.', level: 'From mobile lead to whole platforms', products: ['CheckNShare', 'Verifai AI', 'Alfaris Rent-A-Car', 'Yard Management', 'Fleetable', 'Food-delivery fleet client'] },
+  { when: '2022 — Now', title: 'Senior Software Engineer', at: 'RunCode Software Solutions · Hyderabad', text: 'Mobility and fleet products for Middle East clients: lead mobile engineer on CheckNShare since 2022, the Verifai AI inspection web app, the Alfaris rental app and website, and — solo — the Yard Management 2D/3D platform, used in the Fleetable portal and a food-delivery client’s portal — and I contribute to the Fleetable Enterprise operator app and manage its store releases.', level: 'From mobile lead to whole platforms', products: ['CheckNShare', 'Verifai AI', 'Alfaris Rent-A-Car', 'Yard Management', 'Fleetable', 'Food-delivery fleet client'] },
   { when: '2026', title: 'Freelance Full-Stack Developer', at: 'CBS Student Pass & Attendance', text: 'A complete school system delivered alone for a paying client: teacher mobile app, teacher and admin web portals, real-time API and deployment.', level: 'A whole product, solo' },
 ]
 

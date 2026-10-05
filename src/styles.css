@@ -123,10 +123,9 @@ h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -1px; margin: 8px 0 12px
 .tile::before { content: ""; position: absolute; inset: -1px; border-radius: 20px; padding: 1px; background: linear-gradient(135deg, transparent 40%, var(--h, var(--a)));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: .3s; pointer-events: none; }
 .tile:hover::before { opacity: 1; }
-.t1, .t2 { grid-column: span 3; }
-.t3, .t4, .t5 { grid-column: span 2; }
-.t6 { grid-column: span 6; flex-direction: row; gap: 18px; padding: 18px 24px; }
-.t6 h3, .t6 p { margin: 0; }
+.bento .tile { grid-column: span 3; }
+.bento .tgh { grid-column: span 6; flex-direction: row; gap: 18px; padding: 18px 24px; }
+.tgh h3, .tgh p { margin: 0; }
 .t1 h3, .t2 h3 { font-size: 26px; }
 .kind { font-size: 12px; color: var(--mut); }
 .tile h3 { font-size: 22px; margin: 6px 0 8px; letter-spacing: -.4px; }
@@ -149,6 +148,7 @@ h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -1px; margin: 8px 0 12px
 .viz.img { width: 100%; object-fit: cover; display: block; }
 video.viz.img { background: var(--card2); object-position: top center; }
 .t1 .viz.img, .t2 .viz.img { height: 260px; }
+.t3 .viz.img, .t4 .viz.img, .t5 .viz.img, .t6 .viz.img { height: 200px; }
 .v-yard { background: linear-gradient(90deg, transparent 48%, color-mix(in srgb, var(--b) 50%, transparent) 48% 52%, transparent 52%),
   repeating-linear-gradient(90deg, transparent 0 22px, color-mix(in srgb, var(--a) 35%, transparent) 22px 24px),
   linear-gradient(180deg, transparent 30%, var(--card) 30% 70%, transparent 70%), var(--card2); }
@@ -270,7 +270,7 @@ footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wr
   .stage { height: 480px; overflow: hidden; }
   .c1 { left: 6px; } .c2, .c3 { right: 6px; }
   .bento { grid-template-columns: 1fr; }
-  .t1, .t2, .t3, .t4, .t5, .t6 { grid-column: auto; grid-row: auto; }
+  .bento .tile, .bento .tgh { grid-column: auto; grid-row: auto; }
   .stats, .stack, .hstats { grid-template-columns: 1fr 1fr; }
   .pillars { grid-template-columns: 1fr; }
   .job { grid-template-columns: 1fr; gap: 6px; }

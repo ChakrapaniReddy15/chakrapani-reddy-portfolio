@@ -9,7 +9,7 @@ export default function Projects() {
       <div className="wrap">
         <div className="eyebrow mono rv">01 — SELECTED WORK</div>
         <h2 className="rv">Products I've built</h2>
-        <p className="sub rv">Five products running in production. Each card opens the full story — the problem, what I built, the hard parts and the outcome.</p>
+        <p className="sub rv">Products running in production. Each card opens the full story — the problem, what I built, the hard parts and the outcome.</p>
         <div className="bento">
           {projects.map((p, i) => (
             <Link key={p.slug} to={`/projects/${p.slug}`} className={`tile t${i + 1} rv`} style={{ '--h': p.accent } as CSSProperties}>
@@ -35,7 +35,7 @@ export default function Projects() {
               </span>
             </Link>
           ))}
-          <a className="tile t6 more rv" href="https://github.com/ChakrapaniReddy15" target="_blank" rel="noreferrer">
+          <a className="tile tgh more rv" href="https://github.com/ChakrapaniReddy15" target="_blank" rel="noreferrer">
             <h3>More on GitHub →</h3>
             <p>Side projects &amp; experiments</p>
           </a>
@@ -58,6 +58,14 @@ export default function Projects() {
                   <span className="mono">Related</span>
                   {a.related.map((r) => (
                     <Link key={r.slug} to={`/projects/${r.slug}`}>{r.label} →</Link>
+                  ))}
+                </div>
+              )}
+              {a.links.length > 0 && (
+                <div className="also-rel">
+                  <span className="mono">Live on</span>
+                  {a.links.map((l) => (
+                    <a key={l.url} href={l.url} target="_blank" rel="noreferrer">{l.label} ↗</a>
                   ))}
                 </div>
               )}
