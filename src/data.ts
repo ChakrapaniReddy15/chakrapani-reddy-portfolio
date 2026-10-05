@@ -241,7 +241,7 @@ export const projects: Project[] = [
     slug: 'corporate-car-sharing',
     title: 'CheckNShare',
     tagline: 'Corporate car-sharing platform',
-    kind: 'MOBILE + WEB PLATFORM · 2022 → NOW',
+    kind: 'MOBILE + WEB PLATFORM · LIVE IN STORES · 2022 → NOW',
     summary:
       'Employees book a company car, unlock it with their phone and return it; fleet admins run everything from a web portal. I have led the mobile app since 2022 — from booking and keyless access to on-device AI and payments — and contribute across the portal and backend services.',
     highlights: [
@@ -250,6 +250,10 @@ export const projects: Project[] = [
       'White-label, multi-tenant', '5 languages incl. Arabic RTL',
     ],
     tags: ['React Native', 'Next.js', 'TypeScript', 'BLE', 'TFLite', 'Node.js'],
+    links: [
+      { label: 'App Store', url: 'https://apps.apple.com/app/checknshare/id6443759965' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=org.ae360dev.ticcs.mobileapp' },
+    ],
     visual: 'platform',
     accent: 'var(--a)',
     video: '/projects/cns-card.mp4',
