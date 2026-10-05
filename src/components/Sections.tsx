@@ -44,7 +44,7 @@ export function Journey() {
                   <span className="when mono">{j.when}</span>
                   <span className="level mono">{j.level}</span>
                 </div>
-                <h4>{j.title}</h4>
+                <h3>{j.title}</h3>
                 <div className="at">{j.at}</div>
                 <p>{j.text}</p>
                 {j.products && <div className="tags jprod">{j.products.map((x) => <i key={x}>{x}</i>)}</div>}
@@ -55,7 +55,7 @@ export function Journey() {
             <div className="jdot" aria-hidden="true" />
             <div className="jbody">
               <div className="jtop"><span className="when mono">Next</span></div>
-              <h4>{next.title}</h4>
+              <h3>{next.title}</h3>
               <p>{next.text}</p>
             </div>
           </li>
@@ -74,7 +74,7 @@ export function Stack() {
         <div className="stack">
           {stack.map((g) => (
             <div className="st rv" key={g.group}>
-              <h4><span>▸</span> {g.group}</h4>
+              <h3><span>▸</span> {g.group}</h3>
               <div className="tags">
                 {g.items.map((t) => (
                   <i key={t}>{t}</i>

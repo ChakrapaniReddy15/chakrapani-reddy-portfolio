@@ -3,6 +3,7 @@ import { projects, type Project } from '../data'
 import { Link, backOr } from '../router'
 import Visual from '../components/Visual'
 import { Footer } from '../components/Sections'
+import LazyVideo from '../components/LazyVideo'
 import { useReveal } from '../useReveal'
 
 export default function CaseStudy({ project: p }: { project: Project }) {
@@ -76,7 +77,7 @@ export default function CaseStudy({ project: p }: { project: Project }) {
             {p.gallery.map((g) => (
               <figure key={g.src}>
                 {/\.(mp4|webm)$/.test(g.src) ? (
-                  <video src={g.src} autoPlay muted loop playsInline preload="metadata" />
+                  <LazyVideo src={g.src} label={g.caption} />
                 ) : (
                   <img src={g.src} alt={g.caption} loading="lazy" />
                 )}

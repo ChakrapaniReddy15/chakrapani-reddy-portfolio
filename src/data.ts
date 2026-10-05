@@ -517,6 +517,7 @@ export const stack = [
   { group: '2D / 3D & Visual', items: ['Three.js', 'React Three Fiber', 'Konva', 'SVG overlays', 'Canvas'] },
   { group: 'Mobile', items: ['React Native', 'Expo', 'Swift', 'Android', 'BLE', 'Firebase', 'Maps'] },
   { group: 'AI in product', items: ['TensorFlow Lite', 'VisionCamera frame processors', 'Model output visualisation', 'Annotation tooling'] },
+  { group: 'AI-assisted development', items: ['OpenAI Codex', 'Claude', 'Scaffolding & refactoring', 'Test generation', 'Code review'] },
   { group: 'Backend & Data', items: ['Node.js', 'Express', 'LoopBack', 'Moleculer', 'Django', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Socket.IO'] },
   { group: 'Ship it', items: ['Azure DevOps', 'Azure Artifacts', 'Docker', 'AWS', 'Fastlane', 'CodePush', 'Vitest', 'Jest'] },
 ]

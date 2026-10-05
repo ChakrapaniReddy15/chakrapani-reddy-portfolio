@@ -1,9 +1,10 @@
 import type { Visual as V } from '../data'
 import { InspectionSvg, PlatformSvg, YardSvg } from './Illustrations'
+import LazyVideo from './LazyVideo'
 
 export default function Visual({ type, image, video, alt }: { type: V; image?: string; video?: string; alt: string }) {
   if (video && !video.endsWith('.gif'))
-    return <video className="viz img" src={video} poster={image} autoPlay muted loop playsInline preload="metadata" aria-label={alt} />
+    return <LazyVideo className="viz img" src={video} poster={image} label={alt} />
   if (video) return <img className="viz img" src={video} alt={alt} loading="lazy" />
   if (image) return <img className="viz img" src={image} alt={alt} loading="lazy" />
   if (type === 'ai') return <div className="viz v-svg"><InspectionSvg /></div>
