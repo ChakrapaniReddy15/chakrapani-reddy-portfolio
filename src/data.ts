@@ -59,7 +59,7 @@ export interface Project {
   }
 }
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     slug: 'ai-vehicle-inspection',
     title: 'Verifai AI',
@@ -506,6 +506,10 @@ export const projects: Project[] = [
     },
   },
 ]
+
+/** Order the products appear in on the home page — core project first. */
+const order = ['corporate-car-sharing', 'yard-designer', 'ai-vehicle-inspection', 'car-rental', 'student-pass-system']
+export const projects: Project[] = order.map((slug) => allProjects.find((p) => p.slug === slug)!)
 
 // Real numbers from git history (see README). Shown in the hero.
 export const stats = [
