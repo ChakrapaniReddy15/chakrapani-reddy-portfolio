@@ -13,7 +13,7 @@ export default function Hero() {
         <p className="hello mono">Hi, I'm</p>
         <h1 className="fullname">{profile.name}</h1>
         <p className="tagline">
-          Senior engineer for <span className="grad">React Native and React products.</span>
+          Senior engineer who builds <span className="grad">complete products: mobile, web and backend.</span>
         </p>
         <p className="lead">
           <b>8+ years</b> from my first Swift iOS app to the engineer teams trust with <b>whole products</b>. Today I lead
