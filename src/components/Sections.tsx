@@ -138,7 +138,7 @@ export function Footer() {
   return (
     <footer className="mono">
       <span>© {new Date().getFullYear()} {profile.name}</span>
-      <span>Built with React · Deployed on Netlify</span>
+      <span>Built by Chakrapani Reddy · React, TypeScript, Vite</span>
     </footer>
   )
 }
