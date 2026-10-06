@@ -13,12 +13,12 @@ export default function Hero() {
         <p className="hello mono">Hi, I'm</p>
         <h1 className="fullname">{profile.name}</h1>
         <p className="tagline">
-          I build <span className="grad">websites, apps &amp; custom software.</span>
+          Senior engineer for <span className="grad">React Native and React products.</span>
         </p>
         <p className="lead">
           <b>8+ years</b> from my first Swift iOS app to the engineer teams trust with <b>whole products</b>. Today I lead
           mobile on a multi-brand car-sharing platform, build AI and 2D/3D web tools, and deliver complete systems on my
-          own — <b>mobile app, web portals, API and deployment</b> — for clients in India and the Gulf.
+          own — <b>mobile app, web portals, API and deployment</b> — for product teams and clients in India and the Gulf.
         </p>
         <div className="cta">
           <Link className="btn p" to="/#work">

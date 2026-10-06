@@ -9,7 +9,7 @@ export const profile = {
   github: 'https://github.com/ChakrapaniReddy15',
   // The PDF lives in /public — replace the file (same name) and push to update it.
   resume: '/Sunkesula_Chakrapani_Reddy.pdf',
-  status: 'Open to senior / lead full-stack & mobile roles',
+  status: 'Open to senior / lead full-stack & mobile roles · Hyderabad or remote',
 }
 
 export const marquee = [
