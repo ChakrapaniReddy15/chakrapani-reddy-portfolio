@@ -66,7 +66,7 @@ const allProjects: Project[] = [
     tagline: 'AI vehicle inspection platform',
     kind: 'WEB · AI · MICROSERVICES · 2024 → 2025',
     summary:
-      'Fourteen phone photos in, a damage report out. I built the web app where inspectors review what the AI found — every panel and damage drawn on the photo, filterable and traceable to the model that produced it.',
+      'Fourteen phone photos in, a damage report out. I built the web app where reviewers check what the AI found — every panel and damage drawn on the photo, filterable and traceable to the model that produced it.',
     highlights: [
       'Panel & damage overlays on photos', 'Table ↔ photo highlight sync',
       '14-angle capture · 4-model pipeline', 'Annotation tool for training data',
@@ -87,7 +87,7 @@ const allProjects: Project[] = [
       role: 'Frontend lead · web app and annotation tooling',
       period: 'Nov 2024 – Sep 2025',
       overview:
-        'Verifai AI replaces manual vehicle inspection. A driver captures 14 fixed angles of the car on their phone; a four-model pipeline then identifies each angle, isolates the car, maps every body panel and detects damage — paint damage, scratches, dents, tears and abrasions. The web app is where inspectors and admins review those results, trust them, and correct them so the models keep improving. The same inspection flow is used inside three mobility products.',
+        'Verifai AI replaces manual vehicle inspection. A driver captures 14 fixed angles of the car on their phone; a four-model pipeline then identifies each angle, isolates the car, maps every body panel and detects damage — paint damage, scratches, dents, tears and abrasions. The web app is where reviewers and admins check those results, trust them, and correct them so the models keep improving. The same inspection flow is used inside three mobility products.',
       surfaces: [
         {
           name: 'Inspection web app',
@@ -133,13 +133,13 @@ const allProjects: Project[] = [
         },
       ],
       challenges: [
-        { title: 'Making ML output readable', text: 'Each photo comes back with dozens of polygons, scores and flags. I drew them as scalable SVG over the original image, grouped multi-region damages, and linked every table row to its shape (hover or click either side) so an inspector can verify a result in seconds.' },
+        { title: 'Making ML output readable', text: 'Each photo comes back with dozens of polygons, scores and flags. I drew them as scalable SVG over the original image, grouped multi-region damages, and linked every table row to its shape (hover or click either side) so a reviewer can verify a result in seconds.' },
         { title: 'Pixel-accurate overlays on any screen', text: 'Model coordinates are in the original image space while photos are shown resized. Overlays are re-projected on every resize so shapes, labels and hit areas stay exactly on the damage — on a laptop or a large monitor.' },
         { title: 'Annotation work that is never lost', text: 'Labelling a photo can take minutes. In-progress polygons, labels and the model IDs they belong to are kept locally and restored after a refresh or a re-login, then submitted as one clean training record.' },
         { title: 'Testing models in the field before release', text: 'Built the model-testing flow so a new angle model can be downloaded to a phone, cached by hash and swapped into the live camera at runtime — comparing models on real cars without shipping a new app.' },
       ],
       outcomes: [
-        'Inspectors see exactly what the AI saw — and which model saw it — instead of a black-box score.',
+        'Reviewers see exactly what the AI saw — and which model saw it — instead of a black-box score.',
         'Dense ML output (shapes, scores, timings) made readable for non-technical users.',
         'Corrections flow back as labelled training data through the annotation tool.',
         'New models are tried on real phones and real cars before they go live, through the model-testing app.',
@@ -153,7 +153,7 @@ const allProjects: Project[] = [
     tagline: '2D/3D yard design & operations platform',
     kind: 'WEB · 2D/3D · SOLE DEVELOPER · 2026',
     summary:
-      'Design a parking yard in 2D or 3D, then run it live. I designed and built the whole platform — and shipped it as a package that powers two client products.',
+      'Design a parking yard in 2D or 3D, then run it live. I designed and built the whole platform — and shipped the 2D editor as a package used inside two client products.',
     highlights: [
       '2D editor (Konva) + 3D editor (Three.js)', 'Multi-level yards, ramps & driveways',
       'Live occupancy & operational alerts', 'Admin controls & role permissions',
@@ -230,7 +230,7 @@ const allProjects: Project[] = [
         { title: 'Rules users can trust', text: 'Validation runs while you draw — overlaps, driveway direction, access points off the road — and the same contract is validated on the server, with automated tests for editor rules, routing, import/export and API compatibility.' },
       ],
       outcomes: [
-        'One editor, two client products — behaviour switched by configuration, not forks.',
+        'The 2D editor runs inside two client products — behaviour switched by configuration, not forks.',
         'Five delivery modes (standalone, multi-project, embedded, API, host) through a pluggable data layer.',
         'Automated test suite covering editor rules, routing, import/export and API contracts.',
       ],
