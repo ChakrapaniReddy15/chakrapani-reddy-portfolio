@@ -7,6 +7,9 @@ import NotFound from './pages/NotFound'
 import { projects, profile } from './data'
 import { trackPageView } from './analytics'
 
+/** Case studies of internal tools: visible by link, but search engines are asked not to list them. */
+const NO_INDEX = ['yard-designer', 'ai-vehicle-inspection']
+
 export default function App() {
   const path = usePath()
   const match = path.match(/^\/projects\/([\w-]+)\/?$/)
@@ -36,6 +39,21 @@ export default function App() {
   useEffect(() => {
     trackPageView(path)
   }, [path])
+
+  useEffect(() => {
+    const hide = !!project && NO_INDEX.includes(project.slug)
+    let meta = document.querySelector('meta[name="robots"]')
+    if (hide) {
+      if (!meta) {
+        meta = document.createElement('meta')
+        meta.setAttribute('name', 'robots')
+        document.head.appendChild(meta)
+      }
+      meta.setAttribute('content', 'noindex')
+    } else {
+      meta?.remove()
+    }
+  }, [project])
 
   let page
   if (path === '/' || path === '') page = <Home />
