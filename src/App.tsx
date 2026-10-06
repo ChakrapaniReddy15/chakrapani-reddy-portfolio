@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import CaseStudy from './pages/CaseStudy'
 import NotFound from './pages/NotFound'
 import { projects, profile } from './data'
+import { trackPageView } from './analytics'
 
 export default function App() {
   const path = usePath()
@@ -31,6 +32,10 @@ export default function App() {
         ? `${profile.name} — ${profile.role}`
         : `Page not found — ${profile.name}`
   }, [project, path])
+
+  useEffect(() => {
+    trackPageView(path)
+  }, [path])
 
   let page
   if (path === '/' || path === '') page = <Home />
